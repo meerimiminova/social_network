@@ -1,12 +1,13 @@
 from django.urls import path
 from . import views
 
-from applications.profiles.views import ProfileViewSet
+from applications.profiles.views import ProfileViewSet, RelationshipViewSet
 from rest_framework.routers import DefaultRouter
 
 
 router = DefaultRouter()
 router.register('', ProfileViewSet)
+router.register('', RelationshipViewSet)
 
 urlpatterns = []
 
