@@ -28,6 +28,8 @@ urlpatterns = [
     # path('api/v1/profiles/<int:pk>/', profile_detail, name='profile-detail'),
     path('api/v1/profiles/', include('applications.profiles.urls')),
     path('api/v1/posts/', include('applications.posts.urls')),
+    path('api/v1/comment/', include('applications.posts.urls')),
+    path('api/v1/relationship/', include('applications.profiles.urls')),
     path('swagger(.json|.yaml)', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
